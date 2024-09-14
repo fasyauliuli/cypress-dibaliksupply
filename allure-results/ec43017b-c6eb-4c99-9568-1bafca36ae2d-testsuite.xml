@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1726329333555' stop='1726329347805'>
+    <name>cypress.com</name>
+    <title>cypress.com</title>
+    <test-cases>
+        <test-case start='1726329333568' status='passed' stop='1726329342110'>
+            <name>view list vendor</name>
+            <title>view list vendor</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1726329342124' status='passed' stop='1726329347805'>
+            <name>view button lengkapi when status draft</name>
+            <title>view button lengkapi when status draft</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

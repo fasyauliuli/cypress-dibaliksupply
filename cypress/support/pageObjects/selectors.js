@@ -73,5 +73,8 @@ export default {
     input_reason: '[data-testid="txt_remark"]',
     submit_status: '[data-testid="btn_sku_status_submit"]',
     bt_confirm_status: '#btn_sku_status_confirm_submit',
-    success_nonaktif_sku: "//div[contains(text(),'SKU berhasil dinonaktifkan.')]"
+    success_nonaktif_sku: "//div[contains(text(),'SKU berhasil dinonaktifkan.')]",
+
+    //vendor
+    menu_vendor: 'sider-vendor'
 };

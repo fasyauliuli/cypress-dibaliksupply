@@ -1,0 +1,40 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1726320637246' stop='1726320637522'>
+    <name></name>
+    <title></title>
+    <test-cases>
+        <test-case start='1726320637249' status='broken' stop='1726320637470'>
+            <name>An uncaught error was detected outside of a test</name>
+            <title>An uncaught error was detected outside of a test</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>The following error originated from your test code, not from Cypress.
+                
+                  > (0 , _badeball_cypress_cucumber_preprocessor__WEBPACK_IMPORTED_MODULE_0__.And) is not a function
+                
+                When Cypress detects uncaught errors originating from your test code it will automatically fail the current test.
+                
+                Cypress could not associate this error to any specific test.
+                
+                We dynamically generated a new test to display this failure.</message>
+                <stack-trace>TypeError: The following error originated from your test code, not from Cypress.
+                
+                  > (0 , _badeball_cypress_cucumber_preprocessor__WEBPACK_IMPORTED_MODULE_0__.And) is not a function
+                
+                When Cypress detects uncaught errors originating from your test code it will automatically fail the current test.
+                
+                Cypress could not associate this error to any specific test.
+                
+                We dynamically generated a new test to display this failure.
+                    at ./cypress/support/step_definitions/cypress-web.js (webpack:///./cypress/support/step_definitions/cypress-web.js:11:3)
+                    at __webpack_require__ (webpack:///webpack/bootstrap:19:0)
+                    at eval (webpack:///./cypress/e2e/cypress-web.feature:4:4)
+                    at eval (http://localhost:58158/__cypress/tests?p=cypress/e2e/cypress-web.feature:20447:12)
+                    at eval (&lt;anonymous>)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

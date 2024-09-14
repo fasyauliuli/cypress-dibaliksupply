@@ -1,0 +1,53 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1726313759516' stop='1726313763662'>
+    <name>duckduckgo.com</name>
+    <title>duckduckgo.com</title>
+    <test-cases>
+        <test-case start='1726313759540' status='broken' stop='1726313763630'>
+            <name>visiting the frontpage</name>
+            <title>visiting the frontpage</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>The following error originated from your application code, not from Cypress.
+                
+                  > Cannot read properties of null (reading 'addEventListener')
+                
+                When Cypress detects uncaught errors originating from your application it will automatically fail the current test.
+                
+                This behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.
+                
+                https://on.cypress.io/uncaught-exception-from-application</message>
+                <stack-trace>TypeError: The following error originated from your application code, not from Cypress.
+                
+                  > Cannot read properties of null (reading 'addEventListener')
+                
+                When Cypress detects uncaught errors originating from your application it will automatically fail the current test.
+                
+                This behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.
+                
+                https://on.cypress.io/uncaught-exception-from-application
+                    at &lt;unknown> (&lt;unknown>:2:19)
+                    at HTMLBodyElement.value [as insertBefore] (https://cmp.osano.com/AzqisZTSBrMdc3qLt/bb12d637-24a5-47ce-8788-92e13ca795cf/osano.js:2:140025)
+                    at &lt;unknown> (https://www.googletagmanager.com/gtm.js?id=GTM-K8R2FS5:735:435)
+                    at b (https://www.googletagmanager.com/gtm.js?id=GTM-K8R2FS5:737:94)
+                    at zf (https://www.googletagmanager.com/gtm.js?id=GTM-K8R2FS5:193:78)
+                    at e (https://www.googletagmanager.com/gtm.js?id=GTM-K8R2FS5:516:214)
+                    at &lt;unknown> (https://www.googletagmanager.com/gtm.js?id=GTM-K8R2FS5:131:125)
+                    at Array.&lt;anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-K8R2FS5:517:401)
+                    at Object.execute (https://www.googletagmanager.com/gtm.js?id=GTM-K8R2FS5:517:141)
+                    at mx (https://www.googletagmanager.com/gtm.js?id=GTM-K8R2FS5:517:847)
+                    at rx (https://www.googletagmanager.com/gtm.js?id=GTM-K8R2FS5:522:206)
+                    at sy (https://www.googletagmanager.com/gtm.js?id=GTM-K8R2FS5:539:272)
+                    at vy (https://www.googletagmanager.com/gtm.js?id=GTM-K8R2FS5:543:7)
+                    at b.push (https://www.googletagmanager.com/gtm.js?id=GTM-K8R2FS5:547:320)
+                    at &lt;unknown> (https://www.googletagmanager.com/gtm.js?id=GTM-K8R2FS5:546:299)
+                    at r (https://www.cypress.io/_astro/page.GL2TuvE-.js:23:18216)
+                    at o (https://www.cypress.io/:1:481)
+                    at &lt;unknown> (https://www.cypress.io/:1:854)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

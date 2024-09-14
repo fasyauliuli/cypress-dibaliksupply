@@ -1,0 +1,24 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1726313165579' stop='1726313172844'>
+    <name>duckduckgo.com</name>
+    <title>duckduckgo.com</title>
+    <test-cases>
+        <test-case start='1726313165585' status='failed' stop='1726313172840'>
+            <name>visiting the frontpage</name>
+            <title>visiting the frontpage</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Timed out retrying after 4000ms: expected '[ &lt;input>, 1 more... ]' to have attribute 'placeholder'</message>
+                <stack-trace>AssertionError: Timed out retrying after 4000ms: expected '[ &lt;input>, 1 more... ]' to have attribute 'placeholder'
+                    at Context.eval (webpack:///./cypress/e2e/duckduckgo.js:8:0)
+                    at Registry.runStepDefininition (webpack:///./node_modules/@badeball/cypress-cucumber-preprocessor/dist/registry.js:163:0)
+                    at Object.fn (webpack:///./node_modules/@badeball/cypress-cucumber-preprocessor/dist/browser-runtime.js:496:0)
+                    at runStepWithLogGroup (webpack:///./node_modules/@badeball/cypress-cucumber-preprocessor/dist/helpers/cypress.js:50:0)
+                    at Context.eval (webpack:///./node_modules/@badeball/cypress-cucumber-preprocessor/dist/browser-runtime.js:492:0)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

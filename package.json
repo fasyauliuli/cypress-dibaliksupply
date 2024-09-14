@@ -1,9 +1,12 @@
 {
   "devDependencies": {
     "@cypress/xpath": "^2.0.3",
+    "@shelex/cypress-allure-plugin": "^2.40.2",
+    "allure-commandline": "^2.30.0",
     "cypress": "^13.14.2",
     "cypress-file-upload": "^5.0.8",
-    "faker": "^5.5.3"
+    "faker": "^5.5.3",
+    "mocha-allure-reporter": "^1.4.0"
   },
   "dependencies": {
     "cypress-xpath": "^2.0.1"

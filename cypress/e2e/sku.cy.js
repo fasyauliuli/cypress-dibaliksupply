@@ -1,18 +1,19 @@
 require('@cypress/xpath');
 const faker = require('faker');
 import selectors from '../support/pageObjects/selectors.js';
+// const { beforeEach } = require("mocha")
 
 describe('template spec', () => {
-  it('passes', () => {
-    const product = faker.commerce.productName();
-
-    cy.visit('https://stg-dibalik-supply.efishery.com')
+  it('login', () => {
+    cy.visit(Cypress.env('baseUrl'))
 
     //login
-    cy.get(selectors.username).type('eshrimp.1.atesting@efishery.com')
-    cy.get(selectors.password).type('P@ssw0rd123')
+    cy.get(selectors.username).type(Cypress.env('email'))
+    cy.get(selectors.password).type(Cypress.env('password'))
     cy.xpath(selectors.bt_masuk).click()
+  })
 
+  it('view list sku', () => {
     //view list
     cy.xpath(selectors.dd_sku_management).click()
     cy.get(selectors.menu_sku).click()
@@ -29,7 +30,9 @@ describe('template spec', () => {
     cy.xpath(selectors.col_kategori).should('have.text', 'Kategori')
     cy.xpath(selectors.col_status).should('have.text', 'Status')
     cy.get(selectors.bt_detail).should('have.text', 'Detail')
+  })
 
+  it('search data', () => {
     //search data
     cy.get(selectors.field_search).type('kmp')
     cy.get(selectors.bt_filter).click()
@@ -49,6 +52,10 @@ describe('template spec', () => {
     cy.get(selectors.field_search).type('smoke test')
     cy.get(selectors.bt_filter).click()
     cy.xpath(selectors.search_no_data).should('have.text', 'No SKU Data')
+  })
+
+  it('create sku', () => {
+    const product = faker.commerce.productName();
 
     //create page
     cy.get(selectors.bt_create).click()
@@ -87,7 +94,9 @@ describe('template spec', () => {
     cy.get(selectors.bt_register).click()
     cy.xpath(selectors.bt_confirm).click()
     cy.xpath(selectors.success_submit_sku).should('be.visible')
+  })
 
+  it('detail sku', () => {
     //detail page
     cy.get(selectors.field_search).type('testcobax')
     cy.get(selectors.bt_filter).click()
@@ -103,7 +112,9 @@ describe('template spec', () => {
     cy.get(selectors.detail_weight).should('be.visible')
     cy.get(selectors.detail_dimension).should('be.visible')
     cy.get(selectors.detail_nutritions).should('be.visible')
+  })
 
+  it('edit sku', () => {
     //edit
     cy.get(selectors.bt_edit).click()
     cy.xpath(selectors.title_edit_sku).should('be.visible')

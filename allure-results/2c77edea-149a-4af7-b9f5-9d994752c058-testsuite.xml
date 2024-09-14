@@ -1,0 +1,55 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1726309433703' stop='1726309460185'>
+    <name>template spec</name>
+    <title>template spec</title>
+    <test-cases>
+        <test-case start='1726309433703' status='passed' stop='1726309440288'>
+            <name>login</name>
+            <title>login</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1726309440291' status='passed' stop='1726309444145'>
+            <name>view list sku</name>
+            <title>view list sku</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1726309444148' status='passed' stop='1726309446356'>
+            <name>search data</name>
+            <title>search data</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1726309446357' status='passed' stop='1726309453418'>
+            <name>create sku</name>
+            <title>create sku</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1726309453421' status='passed' stop='1726309454438'>
+            <name>detail sku</name>
+            <title>detail sku</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1726309454439' status='passed' stop='1726309460185'>
+            <name>edit sku</name>
+            <title>edit sku</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

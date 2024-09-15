@@ -76,5 +76,5 @@ export default {
     success_nonaktif_sku: "//div[contains(text(),'SKU berhasil dinonaktifkan.')]",
 
     //vendor
-    menu_vendor: 'sider-vendor'
+    menu_vendor: 'data-testid:sider-vendor'
 };

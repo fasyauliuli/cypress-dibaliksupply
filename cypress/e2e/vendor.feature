@@ -3,28 +3,28 @@ Feature: cypress.com
     Given User login dbs
 
   Scenario: DBS-1>>view list vendor
-    When User click "data-testid:sider-vendor"
-    Then User verify element "xpath://h3[.='Vendor management']" will be displayed
-    And User verify element "id:search" will be displayed
-    And User verify element "id:type" will be displayed
-    And User verify element "id:status" will be displayed
-    And User verify element "data-testid:dd_filter_button" will be displayed
-    And User verify element "data-testid:dd_reset_filter_button" will be displayed
-    And User verify element "xpath://th[.='No. ID']" will be displayed
-    And User verify element "xpath://th[.='Nama Perusahaan']" will be displayed
-    And User verify element "xpath://th[.='Tipe']" will be displayed
-    And User verify element "xpath://th[.='Alamat']" will be displayed
-    And User verify element "xpath://th[.='Status']" will be displayed
+    When User click "menu_vendor"
+    Then User verify element "title_vendor" will be displayed
+    And User verify element "search" will be displayed
+    And User verify element "type" will be displayed
+    And User verify element "status" will be displayed
+    And User verify element "bt_filter" will be displayed
+    And User verify element "bt_reset" will be displayed
+    And User verify element "th_no_id" will be displayed
+    And User verify element "th_company_name" will be displayed
+    And User verify element "th_type" will be displayed
+    And User verify element "th_alamat" will be displayed
+    And User verify element "th_status" will be displayed
 
   Scenario: DBS-2>>view button lengkapi when status draft
-    When User click "data-testid:sider-vendor"
-    And User click "id:status"
-    And User click "xpath://div[text()='Draft']"
-    And User click "data-testid:dd_filter_button"
-    Then User verify element "xpath:(//button[.='Lengkapi'])[1]" will be displayed
+    When User click "menu_vendor"
+    And User click "status"
+    And User click "dd_status_draft"
+    And User click "bt_filter"
+    Then User verify element "bt_lengkapi" will be displayed
 
   Scenario: DBS-3>>search vendor that isn't on the list
-    When User click "data-testid:sider-vendor"
-    And User fill "id:search" with data "kosongan"
-    And User click "data-testid:dd_filter_button"
-    Then User verify element text "xpath://div[text()='No data']" with data "No data"
+    When User click "menu_vendor"
+    And User fill "search" with data "kosongan"
+    And User click "bt_filter"
+    Then User verify element text "search_no_data" with data "No data"

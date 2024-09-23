@@ -9,11 +9,16 @@ Given("User login dbs", () => {
   cy.xpath('//button[.="Masuk"]').click();
 });
 
+let selectorString;
+let selectorType;
+let selectorValue;
+let inputText;
+
 When("User click {string}", (selectorName) => {
-  const selectorString = selectorsVendor[selectorName]; // Retrieve the selector from the imported object
+  selectorString = selectorsVendor[selectorName]; // Retrieve the selector from the imported object
   const param = selectorString.split(":");
-  const selectorType = param[0]; // 'data-testid', 'id', 'xpath'
-  const selectorValue = param[1];
+  selectorType = param[0]; // 'data-testid', 'id', 'xpath'
+  selectorValue = param[1];
 
   if (selectorType === "data-testid") {
     cy.get(`[data-testid="${selectorValue}"]`).click();
@@ -30,10 +35,10 @@ When("User click {string}", (selectorName) => {
 });
 
 Then("User verify element {string} will be displayed", (selectorName) => {
-  const selectorString = selectorsVendor[selectorName]; // Retrieve the selector from the imported object
-  const param = selectorString.split(":");
-  const selectorType = param[0]; // 'data-testid', 'id', 'xpath'
-  const selectorValue = param[1];
+  // const selectorString = selectorsVendor[selectorName]; // Retrieve the selector from the imported object
+  // const param = selectorString.split(":");
+  // const selectorType = param[0]; // 'data-testid', 'id', 'xpath'
+  // const selectorValue = param[1];
 
   if (selectorType === "xpath") {
     cy.xpath(selectorValue).should("be.visible");
@@ -50,31 +55,33 @@ Then("User verify element {string} will be displayed", (selectorName) => {
 });
 
 Then("User fill {string} with data {string}", (selectorName, text) => {
-  const selectorString = selectorsVendor[selectorName]; // Retrieve the selector from the imported object
+  selectorString = selectorsVendor[selectorName]; // Retrieve the selector from the imported object
   const param = selectorString.split(":");
-  const selectorType = param[0]; // 'data-testid', 'id', 'xpath'
-  const selectorValue = param[1];
+  selectorType = param[0]; // 'data-testid', 'id', 'xpath'
+  selectorValue = param[1];
+  inputText = text; // Retrieve the selector from the imported object
 
   if (selectorType === "xpath") {
-    cy.xpath(selectorValue).type(text);
+    cy.xpath(selectorValue).type(inputText);
   } else if (selectorType === "id") {
-    cy.get(`#${selectorValue}`).type(text);
+    cy.get(`#${selectorValue}`).type(inputText);
   } else if (selectorType === "data-testid") {
-    cy.get(`[data-testid="${selectorValue}"]`).type(text);
+    cy.get(`[data-testid="${selectorValue}"]`).type(inputText);
   }
 });
 
 Then("User verify element text {string} with data {string}", (selectorName, text) => {
-  const selectorString = selectorsVendor[selectorName]; // Retrieve the selector from the imported object
+  selectorString = selectorsVendor[selectorName]; // Retrieve the selector from the imported object
   const param = selectorString.split(":");
-  const selectorType = param[0]; // 'data-testid', 'id', 'xpath'
-  const selectorValue = param[1];
+  selectorType = param[0]; // 'data-testid', 'id', 'xpath'
+  selectorValue = param[1];
+  inputText = text;
 
   if (selectorType === "xpath") {
-    cy.xpath(selectorValue).should("have.text", text);
+    cy.xpath(selectorValue).should("have.text", inputText);
   } else if (selectorType === "id") {
-    cy.get(`#${selectorValue}`).should("have.text", text);
+    cy.get(`#${selectorValue}`).should("have.text", inputText);
   } else if (selectorType === "data-testid") {
-    cy.get(`[data-testid="${selectorValue}"]`).should("have.text", text);
+    cy.get(`[data-testid="${selectorValue}"]`).should("have.text", inputText);
   }
 });

@@ -1,0 +1,40 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1727110534539' stop='1727110555084'>
+    <name>cypress.com</name>
+    <title>cypress.com</title>
+    <test-cases>
+        <test-case start='1727110534547' status='passed' stop='1727110541783'>
+            <name>DBS-1>>view list vendor</name>
+            <title>DBS-1>>view list vendor</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1727110541803' status='passed' stop='1727110546409'>
+            <name>DBS-2>>view button lengkapi when status draft</name>
+            <title>DBS-2>>view button lengkapi when status draft</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1727110546418' status='failed' stop='1727110555080'>
+            <name>DBS-3>>search vendor that isn't on the list</name>
+            <title>DBS-3>>search vendor that isn't on the list</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Timed out retrying after 4000ms: expected '&lt;button.ant-btn.css-7uslog.ant-btn-default.ant-btn-block>' to have text 'No data', but the text was 'Filter'</message>
+                <stack-trace>AssertionError: Timed out retrying after 4000ms: expected '&lt;button.ant-btn.css-7uslog.ant-btn-default.ant-btn-block>' to have text 'No data', but the text was 'Filter'
+                    at Context.eval (webpack:///./cypress/support/step_definitions/stepDefitions.js:82:42)
+                    at Registry.runStepDefininition (webpack:///./node_modules/@badeball/cypress-cucumber-preprocessor/dist/registry.js:163:0)
+                    at Object.fn (webpack:///./node_modules/@badeball/cypress-cucumber-preprocessor/dist/browser-runtime.js:496:0)
+                    at runStepWithLogGroup (webpack:///./node_modules/@badeball/cypress-cucumber-preprocessor/dist/helpers/cypress.js:50:0)
+                    at Context.eval (webpack:///./node_modules/@badeball/cypress-cucumber-preprocessor/dist/browser-runtime.js:492:0)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
